@@ -63,7 +63,7 @@ class CalculadoraSalarioTest {
 		funcionario.setCargo(Cargos.DBA);
 		funcionario.setSalario(1000);
 		CalculadoraSalario calculadora = new CalculadoraSalario();
-		assertEquals(750, calculadora.calculaSalario(funcionario));
+		assertEquals(850, calculadora.calculaSalario(funcionario));
 	}
 	
 
