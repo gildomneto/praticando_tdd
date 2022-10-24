@@ -1,3 +1,5 @@
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.text.ParseException;
@@ -8,6 +10,11 @@ class Testes {
 
     private ClienteController clienteController;
 
+    @BeforeEach
+    public void before(){
+        this.clienteController = new ClienteController();
+    }
+
     @Test
     public void CriaClienteTest() throws ParseException {
         Cliente cliente = new Cliente("Gildo", "24/10/2022", "PB");
@@ -17,6 +24,7 @@ class Testes {
 
     @Test
     public void CriaFaturaTest() throws ParseException {
-        String clientGuid = clienteController.criaCliente("Gildo", "24/10/2022", "PB");
+        String clientGuid = clienteController.criaCliente(new Cliente("Gildo", "24/10/2022", "PB"));
+
     }
 }

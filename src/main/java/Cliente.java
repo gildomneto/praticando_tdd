@@ -19,12 +19,12 @@ public class Cliente {
         this.estado = estado;
     }
 
-    public UUID getIdCliente() {
-        return idCliente;
+    public String getIdCliente() {
+        return this.idCliente.toString();
     }
 
     public String getNomeCliente() {
-        return nomeCliente;
+        return this.nomeCliente;
     }
 
     public Date getData() {
