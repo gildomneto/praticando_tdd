@@ -45,5 +45,11 @@ class FuncionaroTest {
 		funcionario.setSalario(2000.50);
 		assertEquals(2000.50, funcionario.getSalario());
 	}
+	
+	@Test
+	void FuncionarioSetCargo() {
+		funcionario.setCargo(Cargos.TESTADOR);
+		assertEquals(Cargos.TESTADOR, funcionario.getCargo());
+	}
 
 }
