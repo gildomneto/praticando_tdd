@@ -24,5 +24,13 @@ class CalculadoraSalarioTest {
 		CalculadoraSalario calculadora = new CalculadoraSalario();
 		assertEquals(4000, calculadora.calculaSalario(funcionario));
 	}
+	
+	@Test
+	void CalculaSalarioDevIgual3000() {
+		funcionario.setSalario(3000);
+		CalculadoraSalario calculadora = new CalculadoraSalario();
+		assertEquals(2400, calculadora.calculaSalario(funcionario));
+	}
+	
 
 }
