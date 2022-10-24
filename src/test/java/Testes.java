@@ -26,5 +26,7 @@ class Testes {
     public void CriaFaturaTest() throws ParseException {
         String clientGuid = clienteController.criaCliente(new Cliente("Gildo", "24/10/2022", "PB"));
         Fatura fatura = new Fatura(500, "24/10/2022", clientGuid);
+
+        assertEquals(clientGuid, fatura.getCliente());
     }
 }
