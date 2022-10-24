@@ -33,5 +33,10 @@ public class Funcionario {
 	public void setSalario(double salario) {
 		this.salario = salario;
 	}
+	
+	public void setCargo(Cargos cargo) {
+		this.cargo = cargo;
+	}
+	
 
 }
