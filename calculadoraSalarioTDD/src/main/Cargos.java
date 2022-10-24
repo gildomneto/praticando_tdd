@@ -1,8 +1,8 @@
 package main;
 
 public enum Cargos {
-	Desenvolvedor,
+	DESENVOLVEDOR,
 	DBA,
-	Testador,
-	Gerente
+	TESTADOR,
+	GERENTE
 }

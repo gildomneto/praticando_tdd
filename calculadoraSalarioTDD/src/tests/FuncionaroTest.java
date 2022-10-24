@@ -14,7 +14,7 @@ class FuncionaroTest {
 
 	@BeforeAll
 	public static void init() {
-		funcionario = new Funcionario("Digglet", "digglet@gmail.com", 10.000, Cargos.Desenvolvedor);
+		funcionario = new Funcionario("Digglet", "digglet@gmail.com", 10.000, Cargos.DESENVOLVEDOR);
 	}
 	
 	@Test
@@ -34,7 +34,7 @@ class FuncionaroTest {
 	
 	@Test
 	void FuncionarioGetCargo() {
-		 assertEquals(Cargos.Desenvolvedor, funcionario.getCargo());
+		 assertEquals(Cargos.DESENVOLVEDOR, funcionario.getCargo());
 	}
 
 }
