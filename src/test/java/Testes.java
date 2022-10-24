@@ -13,6 +13,7 @@ class Testes {
     @BeforeEach
     public void before(){
         this.clienteController = new ClienteController();
+
     }
 
     @Test
@@ -24,9 +25,16 @@ class Testes {
 
     @Test
     public void CriaFaturaTest() throws ParseException {
-        String clientGuid = clienteController.criaCliente(new Cliente("Gildo", "24/10/2022", "PB"));
-        Fatura fatura = new Fatura(500, "24/10/2022", clientGuid);
+        String idCliente = clienteController.criaCliente(new Cliente("Gildo", "24/10/2022", "PB"));
+        Fatura fatura = new Fatura(500, "24/10/2022", idCliente);
 
-        assertEquals(clientGuid, fatura.getCliente());
+        assertEquals(idCliente, fatura.getCliente());
+    }
+
+    @Test
+    public void FiltroDeFaturasMenoreQue2000() throws ParseException{
+        String idCliente = clienteController.criaCliente(new Cliente("Gildo", "24/10/2022", "PB"));
+
+        FiltroDeFaturas filtroDeFaturas = new FiltroDeFaturas();
     }
 }
