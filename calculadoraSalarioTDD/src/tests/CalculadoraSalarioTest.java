@@ -20,6 +20,7 @@ class CalculadoraSalarioTest {
 
 	@Test
 	void CalculaSalarioDevMaior3000() {
+		funcionario.setCargo(Cargos.DESENVOLVEDOR);
 		funcionario.setSalario(5000);
 		CalculadoraSalario calculadora = new CalculadoraSalario();
 		assertEquals(4000, calculadora.calculaSalario(funcionario));
@@ -27,6 +28,7 @@ class CalculadoraSalarioTest {
 	
 	@Test
 	void CalculaSalarioDevIgual3000() {
+		funcionario.setCargo(Cargos.DESENVOLVEDOR);
 		funcionario.setSalario(3000);
 		CalculadoraSalario calculadora = new CalculadoraSalario();
 		assertEquals(2400, calculadora.calculaSalario(funcionario));
@@ -34,6 +36,7 @@ class CalculadoraSalarioTest {
 	
 	@Test
 	void CalculaSalarioDevMenor3000() {
+		funcionario.setCargo(Cargos.DESENVOLVEDOR);
 		funcionario.setSalario(2000);
 		CalculadoraSalario calculadora = new CalculadoraSalario();
 		assertEquals(1800, calculadora.calculaSalario(funcionario));
