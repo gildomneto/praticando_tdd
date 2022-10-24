@@ -15,19 +15,19 @@ public class Funcionario {
 	}
 	
 	public String getNome() {
-		throw new IllegalArgumentException("Not implemented");
+		return this.nome;
 	}
 	
 	public String getEmail() {
-		throw new IllegalArgumentException("Not implemented");
+		return this.email;
 	}
 	
 	public double getSalario() {
-		throw new IllegalArgumentException("Not implemented");
+		return this.salario;
 	}
 	
 	public Cargos getCargo() {
-		throw new IllegalArgumentException("Not implemented");
+		return this.cargo;
 	}
 	
 
