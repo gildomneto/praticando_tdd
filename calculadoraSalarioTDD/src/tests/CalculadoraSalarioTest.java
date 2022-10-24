@@ -39,5 +39,29 @@ class CalculadoraSalarioTest {
 		assertEquals(1800, calculadora.calculaSalario(funcionario));
 	}
 	
+	@Test
+	void CalculaSalarioDBAMaior2000() {
+		funcionario.setCargo(Cargos.DBA);
+		funcionario.setSalario(5000);
+		CalculadoraSalario calculadora = new CalculadoraSalario();
+		assertEquals(3750, calculadora.calculaSalario(funcionario));
+	}
+	
+	@Test
+	void CalculaSalarioDBAIgual2000() {
+		funcionario.setCargo(Cargos.DBA);
+		funcionario.setSalario(2000);
+		CalculadoraSalario calculadora = new CalculadoraSalario();
+		assertEquals(1500, calculadora.calculaSalario(funcionario));
+	}
+	
+	@Test
+	void CalculaSalariDBAMenor2000() {
+		funcionario.setCargo(Cargos.DBA);
+		funcionario.setSalario(1000);
+		CalculadoraSalario calculadora = new CalculadoraSalario();
+		assertEquals(750, calculadora.calculaSalario(funcionario));
+	}
+	
 
 }
