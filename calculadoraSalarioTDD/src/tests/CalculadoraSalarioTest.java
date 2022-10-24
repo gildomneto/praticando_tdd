@@ -90,5 +90,30 @@ class CalculadoraSalarioTest {
 		assertEquals(850, calculadora.calculaSalario(funcionario));
 	}
 	
+	@Test
+	void CalculaSalarioGerenteMaior5000() {
+		funcionario.setCargo(Cargos.GERENTE);
+		funcionario.setSalario(10000);
+		CalculadoraSalario calculadora = new CalculadoraSalario();
+		assertEquals(7000, calculadora.calculaSalario(funcionario));
+	}
+	
+	@Test
+	void CalculaSalarioGerenteIgual5000() {
+		funcionario.setCargo(Cargos.GERENTE);
+		funcionario.setSalario(5000);
+		CalculadoraSalario calculadora = new CalculadoraSalario();
+		assertEquals(3500, calculadora.calculaSalario(funcionario));
+	}
+	
+	@Test
+	void CalculaSalariGerenteMenor5000() {
+		funcionario.setCargo(Cargos.GERENTE);
+		funcionario.setSalario(2000);
+		CalculadoraSalario calculadora = new CalculadoraSalario();
+		assertEquals(1600, calculadora.calculaSalario(funcionario));
+	}
+	
+	
 
 }
