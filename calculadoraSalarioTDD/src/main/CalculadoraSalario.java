@@ -25,6 +25,13 @@ public class CalculadoraSalario {
 				return funcionario.getSalario() * 0.85;
 			}
 		}
+		else if (funcionario.getCargo() == Cargos.GERENTE) {
+			if(funcionario.getSalario() >= 5000) {
+				return funcionario.getSalario() * 0.70;
+			} else {
+				return funcionario.getSalario() * 0.80;
+			}
+		}
 		return 0;
 	}
 
