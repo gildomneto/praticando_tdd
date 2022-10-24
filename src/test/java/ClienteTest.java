@@ -6,6 +6,6 @@ class ClienteTest {
 
     @Test
     public void CriaClienteTest(){
-        Cliente cliente = new Cliente();
+        Cliente cliente = new Cliente("Gildo", "24/10/2022");
     }
 }
