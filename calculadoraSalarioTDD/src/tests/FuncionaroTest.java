@@ -2,7 +2,9 @@ package tests;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.Before;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import main.Cargos;
@@ -34,7 +36,14 @@ class FuncionaroTest {
 	
 	@Test
 	void FuncionarioGetCargo() {
+		funcionario = new Funcionario("Digglet", "digglet@gmail.com", 10.000, Cargos.DESENVOLVEDOR);
 		 assertEquals(Cargos.DESENVOLVEDOR, funcionario.getCargo());
+	}
+	
+	@Test
+	void FuncionarioSetSalario() {
+		funcionario.setSalario(2000.50);
+		assertEquals(2000.50, funcionario.getSalario());
 	}
 
 }
