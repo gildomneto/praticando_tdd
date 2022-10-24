@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class Testes {
 
+    private ClienteController clienteController;
+
     @Test
     public void CriaClienteTest() throws ParseException {
         Cliente cliente = new Cliente("Gildo", "24/10/2022", "PB");
@@ -15,6 +17,6 @@ class Testes {
 
     @Test
     public void CriaFaturaTest() throws ParseException {
-        String clientGuid = clientController.criaClient("Gildo", "24/10/2022", "PB");
+        String clientGuid = clienteController.criaCliente("Gildo", "24/10/2022", "PB");
     }
 }
