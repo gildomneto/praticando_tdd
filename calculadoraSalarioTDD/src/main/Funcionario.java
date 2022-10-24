@@ -30,5 +30,8 @@ public class Funcionario {
 		return this.cargo;
 	}
 	
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
 
 }
