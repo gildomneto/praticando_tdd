@@ -18,4 +18,19 @@ public class Fatura {
         this.cliente = cliente;
     }
 
+    public String getCodigo() {
+        return this.codigo;
+    }
+
+    public float getValor() {
+        return this.valor;
+    }
+
+    public Date getData() {
+        return data;
+    }
+
+    public String getCliente() {
+        return this.cliente;
+    }
 }
