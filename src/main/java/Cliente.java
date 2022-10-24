@@ -18,4 +18,20 @@ public class Cliente {
         this.data = simpleDateFormat.parse(data);
         this.estado = estado;
     }
+
+    public UUID getIdCliente() {
+        return idCliente;
+    }
+
+    public String getNomeCliente() {
+        return nomeCliente;
+    }
+
+    public Date getData() {
+        return data;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
 }

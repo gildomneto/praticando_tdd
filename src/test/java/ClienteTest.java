@@ -10,6 +10,6 @@ class ClienteTest {
     public void CriaClienteTest() throws ParseException {
         Cliente cliente = new Cliente("Gildo", "24/10/2022", "PB");
 
-        assertEquals("Gildo", cliente.getNome());
+        assertEquals("Gildo", cliente.getNomeCliente());
     }
 }
