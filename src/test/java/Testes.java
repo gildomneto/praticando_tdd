@@ -38,6 +38,7 @@ class Testes {
 
         Fatura[] faturasASeremFiltradas = {new Fatura(500, "24/10/2022", idCliente)};
 
-        assertEquals(0, filtroDeFaturas.filtraFaturas(faturasASeremFiltradas));
+        assertEquals(0, filtroDeFaturas.filtraFaturas(faturasASeremFiltradas).size());
+
     }
 }
