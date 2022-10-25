@@ -20,6 +20,9 @@ public class FiltroDeFaturas {
             else if (fatura.getValor() >= 2000 && fatura.getValor()<2500){
                 listaFiltrada.remove(fatura);
             }
+            else if (fatura.getValor() >= 2500 && fatura.getValor() < 3000){
+                listaFiltrada.remove(fatura);
+            }
 
         }
         return listaFiltrada;
