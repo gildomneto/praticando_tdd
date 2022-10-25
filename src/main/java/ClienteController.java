@@ -13,4 +13,8 @@ public class ClienteController {
         this.clientes.put(cliente.getIdCliente(), cliente);
         return cliente.getIdCliente();
     }
+
+    public Cliente getCliente(String idCliente){
+        return this.clientes.get(idCliente);
+    }
 }

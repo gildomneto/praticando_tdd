@@ -10,8 +10,15 @@ public class FiltroDeFaturas {
         this.clienteController = clienteController;
     }
 
-    public List<Fatura> filtraFaturas(Fatura[] faturas){
+    public List<Fatura> filtraFaturas(Fatura[] faturas) {
         List<Fatura> listaFiltrada = new ArrayList<>(Arrays.asList(faturas));
+        for (Fatura fatura : faturas) {
+            Cliente client = this.clienteController.getCliente(fatura.getCliente());
+            if (fatura.getValor() < 2000) {
+                listaFiltrada.remove(fatura);
+            }
+
+        }
         return listaFiltrada;
     }
 }
