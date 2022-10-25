@@ -41,4 +41,13 @@ class Testes {
         assertEquals(0, filtroDeFaturas.filtraFaturas(faturasASeremFiltradas).size());
 
     }
+
+    @Test
+    public void FiltroDeFaturasEntre2000E2500() throws ParseException{
+        String idCliente = clienteController.criaCliente(new Cliente("Gildo", "24/10/2022", "PB"));
+
+        Fatura[] faturasASeremFiltradas = {new Fatura(2100, "24/10/2022", idCliente)};
+
+        assertEquals(0, filtroDeFaturas.filtraFaturas(faturasASeremFiltradas).size());
+    }
 }
