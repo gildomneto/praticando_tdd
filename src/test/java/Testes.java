@@ -9,10 +9,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class Testes {
 
     private ClienteController clienteController;
+    private FiltroDeFaturas filtroDeFaturas;
 
     @BeforeEach
     public void before(){
         this.clienteController = new ClienteController();
+        this.filtroDeFaturas = new FiltroDeFaturas(clienteController);
     }
 
     @Test
