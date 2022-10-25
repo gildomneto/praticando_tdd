@@ -13,7 +13,6 @@ class Testes {
     @BeforeEach
     public void before(){
         this.clienteController = new ClienteController();
-
     }
 
     @Test
@@ -35,6 +34,8 @@ class Testes {
     public void FiltroDeFaturasMenoreQue2000() throws ParseException{
         String idCliente = clienteController.criaCliente(new Cliente("Gildo", "24/10/2022", "PB"));
 
-        FiltroDeFaturas filtroDeFaturas = new FiltroDeFaturas();
+        Fatura[] faturasASeremFiltradas = {new Fatura(500, "24/10/2022", idCliente)};
+
+        assertEquals(0, filtroDeFaturas.filtraFaturas(faturasASeremFiltradas));
     }
 }
