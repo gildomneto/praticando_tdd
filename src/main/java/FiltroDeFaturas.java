@@ -6,5 +6,7 @@ public class FiltroDeFaturas {
         this.clienteController = clienteController;
     }
 
-
+    public short filtraFaturas(Fatura[] faturas){
+        return 0;
+    }
 }
